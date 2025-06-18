@@ -11,7 +11,7 @@ export default function App() {
 
   const ambilData = async () => {
     try {
-      const response = await fetch("https://diarybe-e93479621824.herokuapp.com/");
+      const response = await fetch("https://diarybe-e93479621824.herokuapp.com/api/diary");
       const data = await response.json();
       setDiary(data);
     } catch (error) {
@@ -21,7 +21,7 @@ export default function App() {
 
   const tambahDiary = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/adddiary", {
+      const response = await fetch("https://diarybe-e93479621824.herokuapp.com/api/adddiary", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ title, description }),
@@ -38,7 +38,7 @@ export default function App() {
 
   const hapusDiary = async (id) => {
   try {
-    const response = await fetch(`http://localhost:5000/api/delete/${id}`, {
+    const response = await fetch(`https://diarybe-e93479621824.herokuapp.com/api/delete/${id}`, {
       method: "DELETE",
     });
     if (!response.ok) throw new Error("Failed to delete data");
@@ -50,7 +50,7 @@ export default function App() {
 
 const simpanEdit = async (id) => {
   try {
-    const response = await fetch(`http://localhost:5000/api/edit/${id}`, {
+    const response = await fetch(`https://diarybe-e93479621824.herokuapp.com/api/edit/${id}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ title: editTitle, description: editDescription }),
