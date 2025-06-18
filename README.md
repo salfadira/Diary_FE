@@ -1,12 +1,39 @@
-# React + Vite
+# 📝 Diary App – React + Vite + Heroku + PostgreSQL
+## Salfadira Putri Enjeli 2E (24083000091)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Live Website:** [https://diarysalfa2e.netlify.app](https://diarysalfa2e.netlify.app)
 
-Currently, two official plugins are available:
+## 📌 Deskripsi
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Diary App ini adalah aplikasi web sederhana yang memungkinkan pengguna untuk menulis, membaca, mengedit, dan menghapus catatan harian. Proyek ini menggunakan React di frontend, Express di backend, dan PostgreSQL sebagai database.
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ⚙️ Teknologi yang Digunakan
+
+### 🖥️ Frontend
+- [React](https://reactjs.org/) – Library untuk membangun antarmuka pengguna
+- [Vite](https://vitejs.dev/) – Build tool yang cepat dengan dukungan HMR
+- [Netlify](https://www.netlify.com/) – Platform untuk deploy frontend
+
+### 🔧 Backend
+- [Node.js](https://nodejs.org/) & [Express](https://expressjs.com/) – Framework untuk membuat REST API
+- [Heroku](https://www.heroku.com/) – Platform deployment backend
+- [PostgreSQL](https://www.postgresql.org/) – Database relasional
+
+---
+
+## 🔗 API Endpoints
+
+| Method | Endpoint              | Deskripsi                          |
+|--------|-----------------------|------------------------------------|
+| POST   | `/api/adddiary`       | Tambahkan catatan baru             |
+| GET    | `/api/diary`          | Ambil semua catatan                |
+| GET    | `/api/getdiary/:id`   | Ambil catatan berdasarkan ID       |
+| PUT    | `/api/edit/:id`       | Edit catatan berdasarkan ID        |
+| DELETE | `/api/delete/:id`     | Hapus catatan berdasarkan ID       |
+
+---
+
+## 📁 Struktur Folder
+
